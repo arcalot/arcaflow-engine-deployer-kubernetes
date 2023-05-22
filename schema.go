@@ -816,7 +816,7 @@ var Schema = schema.NewTypedScopeSchema[*Config](
 				},
 			),
 			"key": schema.NewPropertySchema(
-				schema.NewStringSchema(schema.IntPointer(1), nil, regexp.MustCompile(`^\s*-----BEGIN ([A-Z]+) PRIVATE KEY-----(\s*.*\s*)*-----END ([A-Z]+) PRIVATE KEY-----\s*$`)),
+				schema.NewStringSchema(schema.IntPointer(1), nil, regexp.MustCompile(`^\s*-----BEGIN(\s+[A-Z]+\s+|\s+)PRIVATE KEY-----(.|\n)+-----END(\s+[A-Z]+\s+|\s+)PRIVATE KEY-----\s*$`)),
 				schema.NewDisplayValue(
 					schema.PointerTo("Client key"),
 					schema.PointerTo("Client private key in PEM format to authenticate against Kubernetes with."),
