@@ -30,5 +30,8 @@ func (c connectorContainer) Close() error {
 }
 
 func (c connectorContainer) ID() string {
-	return string(c.pod.UID)
+	if len(c.pod.Status.ContainerStatuses) > 0 {
+		return c.pod.Status.ContainerStatuses[0].ContainerID
+	}
+	return ""
 }
