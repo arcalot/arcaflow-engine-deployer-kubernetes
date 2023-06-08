@@ -39,6 +39,9 @@ func TestSimpleInOut(t *testing.T) {
 	buf := new(strings.Builder)
 	assert.NoErrorR[int64](t)(io.Copy(buf, container))
 	assert.Contains(t, buf.String(), "This is what input was received: \"abc\"")
+
+	id := container.ID()
+	assert.NotNil(t, id)
 }
 
 func TestSecurityContextSerialization(t *testing.T) {

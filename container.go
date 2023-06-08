@@ -30,5 +30,5 @@ func (c connectorContainer) Close() error {
 }
 
 func (c connectorContainer) ID() string {
-	return c.pod.Name
+	return string(c.pod.UID)
 }
