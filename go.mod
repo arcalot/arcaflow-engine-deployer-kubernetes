@@ -1,6 +1,6 @@
 module go.flow.arcalot.io/kubernetesdeployer
 
-go 1.23
+go 1.23.0
 
 toolchain go1.23.4
 
@@ -9,7 +9,7 @@ require (
 	go.arcalot.io/lang v1.1.0
 	go.arcalot.io/log/v2 v2.2.0
 	go.flow.arcalot.io/deployer v0.6.1
-	go.flow.arcalot.io/pluginsdk v0.14.1
+	go.flow.arcalot.io/pluginsdk v0.14.2
 	k8s.io/api v0.31.2
 	k8s.io/apimachinery v0.31.2
 	k8s.io/client-go v0.31.2
