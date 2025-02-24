@@ -74,7 +74,6 @@ linters-settings:
           - k8s.io/
   govet:
     enable-all: true
-    shadow: false
     disable:
       # We don't care about variable shadowing.
       - shadow
